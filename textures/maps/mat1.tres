@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://be7xi1equkqrs"]
+
+[ext_resource type="Texture2D" uid="uid://diru60p85cjld" path="res://textures/maps/pine_2.jpg" id="1_4f4dj"]
+
+[resource]
+resource_name = "mat1"
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_4f4dj")
+metallic = 1.0
+texture_filter = 1

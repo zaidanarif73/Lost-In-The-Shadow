@@ -1,0 +1,21 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://dsay4gdr8k6ur"]
+
+[ext_resource type="Texture2D" uid="uid://bxqv31l1boa0a" path="res://textures/maps/_0009_AllSkyFree_Screen_01.jpg" id="1_ybqnj"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cmrwf"]
+panorama = ExtResource("1_ybqnj")
+
+[sub_resource type="Sky" id="Sky_0poj2"]
+sky_material = SubResource("PanoramaSkyMaterial_cmrwf")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_0poj2")
+ambient_light_source = 3
+reflected_light_source = 2
+fog_enabled = true
+fog_light_color = Color(0.321569, 0.607843, 0.745098, 1)
+fog_aerial_perspective = 0.453
+fog_sky_affect = 0.253
+volumetric_fog_density = 0.017
+adjustment_contrast = 1.1

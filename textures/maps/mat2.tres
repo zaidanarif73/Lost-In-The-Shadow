@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d2u25gfnremt8"]
+
+[ext_resource type="Texture2D" uid="uid://dpe244rm6sgs2" path="res://textures/maps/pine_3.jpg" id="1_mahks"]
+
+[resource]
+resource_name = "mat2"
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_mahks")
+texture_filter = 1
