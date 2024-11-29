@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3ffql15mo0aj"]
+[gd_scene load_steps=8 format=3 uid="uid://c3ffql15mo0aj"]
 
 [ext_resource type="Script" path="res://controllers/scripts/fps_controller.gd" id="1_pgc1p"]
 [ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://materials/player.tres" id="2_gldw4"]
+[ext_resource type="PackedScene" uid="uid://do8xenafpyngu" path="res://levels/weapon.tscn" id="3_05d8o"]
+[ext_resource type="Script" path="res://controllers/WeaponViewport.gd" id="4_t6vkx"]
+[ext_resource type="Script" path="res://controllers/WeaponCamera.gd" id="6_lgbcu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u6tj1"]
 
@@ -24,7 +27,34 @@ mesh = SubResource("CapsuleMesh_6tv51")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.130704, 0.116966)
+cull_mask = 1048573
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
 update_mode = 1
 enable_shadows = true
+
+[node name="WeaponRig" type="Node3D" parent="CameraController/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33986, 0)
+
+[node name="Weapon" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("3_05d8o")]
+transform = Transform3D(-0.000999647, -2.65755e-05, -5.38843e-07, -2.65471e-05, 0.000997147, 7.06612e-05, -1.34061e-06, 7.06505e-05, -0.0009975, 0.415852, -0.196463, -0.599069)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+script = ExtResource("4_t6vkx")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0268364, 0)
+cull_mask = 1048574
+script = ExtResource("6_lgbcu")
+MAIN_CAMERA = NodePath("../../../CameraController/Camera3D/WeaponRig")
