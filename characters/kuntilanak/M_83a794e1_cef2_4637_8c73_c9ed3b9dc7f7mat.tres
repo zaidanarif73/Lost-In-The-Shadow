@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dsyc0ofu2bs1s"]
+
+[ext_resource type="Texture2D" uid="uid://cbjnu55ixl1j3" path="res://characters/kuntilanak/kuntilanak_Iv Pole Walking_1.png" id="1_mh2h0"]
+
+[resource]
+resource_name = "M_83a794e1_cef2_4637_8c73_c9ed3b9dc7f7mat"
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_mh2h0")
+emission_enabled = true

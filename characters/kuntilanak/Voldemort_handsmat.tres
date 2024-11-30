@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cppv45387hlft"]
+
+[ext_resource type="Texture2D" uid="uid://cb35a4f0fr3as" path="res://characters/kuntilanak/kuntilanak_Iv Pole Walking_0.png" id="1_orfji"]
+
+[resource]
+resource_name = "Voldemort_handsmat"
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_orfji")
+emission_enabled = true

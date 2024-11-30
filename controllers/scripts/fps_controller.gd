@@ -53,7 +53,6 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta):
-	
 	# Update camera movement based on mouse movement
 	_update_camera(delta)
 	

@@ -1,0 +1,56 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://6cq3gwi37dlt"
+path="res://.godot/imported/kuntilanak_Iv Pole Walking.fbx-59381fec24af959deac769fa4bf5bc1f.scn"
+
+[deps]
+
+source_file="res://characters/kuntilanak/kuntilanak_Iv Pole Walking.fbx"
+dest_files=["res://.godot/imported/kuntilanak_Iv Pole Walking.fbx-59381fec24af959deac769fa4bf5bc1f.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"M_83a794e1_cef2_4637_8c73_c9ed3b9dc7f7mat": {
+"use_external/enabled": true,
+"use_external/path": "res://characters/kuntilanak/M_83a794e1_cef2_4637_8c73_c9ed3b9dc7f7mat.tres"
+},
+"Voldemort_handsmat": {
+"use_external/enabled": true,
+"use_external/path": "res://characters/kuntilanak/Voldemort_handsmat.tres"
+},
+"_auto_29mat": {
+"use_external/enabled": true,
+"use_external/path": "res://characters/kuntilanak/_auto_29mat.tres"
+},
+"_auto_2mat": {
+"use_external/enabled": true,
+"use_external/path": "res://characters/kuntilanak/_auto_2mat.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
