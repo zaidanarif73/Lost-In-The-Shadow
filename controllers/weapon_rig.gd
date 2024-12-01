@@ -4,6 +4,9 @@ extends Node3D
 @onready var senter = $Weapon
 @onready var medkit = $Medkit
 
+@onready var senter_animation = $Weapon/SenterAnimation
+@onready var medkit_animation = $Medkit/MedkitAnimation
+@onready var key_animation = $Key/KeyAnimation
 # Array of weapon types
 var weapons = ["senter", "medkit", "key"]
 var current_weapon_index = 0
@@ -29,7 +32,10 @@ func _change_weapon() -> void:
 	var current_weapon = weapons[current_weapon_index]
 	if current_weapon == "senter":
 		senter.visible = true
+		senter_animation.play("entrance")
 	elif current_weapon == "medkit":
 		medkit.visible = true
+		medkit_animation.play("entrance")
 	elif current_weapon == "key":
 		key.visible = true
+		key_animation.play("entrance")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c3ffql15mo0aj"]
+[gd_scene load_steps=15 format=3 uid="uid://c3ffql15mo0aj"]
 
 [ext_resource type="Script" path="res://controllers/scripts/fps_controller.gd" id="1_pgc1p"]
 [ext_resource type="Script" path="res://controllers/weapon_rig.gd" id="2_jqy4g"]
@@ -69,42 +69,6 @@ _data = {
 "entrance": SubResource("Animation_1r0q2")
 }
 
-[sub_resource type="Animation" id="Animation_g6yui"]
-resource_name = "entrance"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.582915, -1.63969, -1.28393), Vector3(0.582915, -0.724902, -1.28393)]
-}
-
-[sub_resource type="Animation" id="Animation_k7gqf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.582915, -0.724902, -1.28393)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rdi01"]
-_data = {
-"RESET": SubResource("Animation_k7gqf"),
-"entrance": SubResource("Animation_g6yui")
-}
-
 [node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
 script = ExtResource("1_pgc1p")
 MOUSE_SENSITIVITY = 0.25
@@ -154,12 +118,6 @@ speed_scale = 4.0
 [node name="Key" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("4_7n8t0")]
 transform = Transform3D(-0.199799, 0.554423, 0.807896, 0.133104, 0.832235, -0.538208, -0.970754, 2.13417e-07, -0.240076, 0.582915, -0.724902, -1.28393)
 visible = false
-
-[node name="KeyAnimation" type="AnimationPlayer" parent="CameraController/Camera3D/WeaponRig/Key"]
-libraries = {
-"": SubResource("AnimationLibrary_rdi01")
-}
-speed_scale = 4.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
 update_mode = 1
