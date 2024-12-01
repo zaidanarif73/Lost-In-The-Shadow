@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 
+@onready var JUMP_BTN = $"../JumpBtn"
 var _mouse_input : bool = false
 var _rotation_input : float
 var _tilt_input : float
@@ -61,7 +62,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") or JUMP_BTN.is_pressed() and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
