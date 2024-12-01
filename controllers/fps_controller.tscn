@@ -33,21 +33,6 @@ _data = {
 "entrance": SubResource("Animation_e7c7x")
 }
 
-[sub_resource type="Animation" id="Animation_1r0q2"]
-resource_name = "entrance"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(5.94089e-08, -0.233325, -0.188902), Vector3(4.38611e-08, -0.11739, -0.188902)]
-}
-
 [sub_resource type="Animation" id="Animation_nag31"]
 length = 0.001
 tracks/0/type = "value"
@@ -63,13 +48,7 @@ tracks/0/keys = {
 "values": [Vector3(4.38611e-08, -0.11739, -0.188902)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_30515"]
-_data = {
-"RESET": SubResource("Animation_nag31"),
-"entrance": SubResource("Animation_1r0q2")
-}
-
-[sub_resource type="Animation" id="Animation_g6yui"]
+[sub_resource type="Animation" id="Animation_1r0q2"]
 resource_name = "entrance"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -81,7 +60,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.582915, -1.63969, -1.28393), Vector3(0.582915, -0.724902, -1.28393)]
+"values": [Vector3(5.94089e-08, -0.233325, -0.188902), Vector3(4.38611e-08, -0.11739, -0.188902)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30515"]
+_data = {
+"RESET": SubResource("Animation_nag31"),
+"entrance": SubResource("Animation_1r0q2")
 }
 
 [sub_resource type="Animation" id="Animation_k7gqf"]
@@ -97,6 +82,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.582915, -0.724902, -1.28393)]
+}
+
+[sub_resource type="Animation" id="Animation_g6yui"]
+resource_name = "entrance"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.582915, -1.63969, -1.28393), Vector3(0.582915, -0.724902, -1.28393)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rdi01"]
