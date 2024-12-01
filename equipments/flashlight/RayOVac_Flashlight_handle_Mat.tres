@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bm7a4iufx7j4g"]
+
+[ext_resource type="Texture2D" uid="uid://bn5dntyxe3wib" path="res://equipments/flashlight/flash_light_rayovac_style_1940s_0.jpg" id="1_oak85"]
+[ext_resource type="Texture2D" uid="uid://bwwqp4er5lmcv" path="res://equipments/flashlight/flash_light_rayovac_style_1940s_1.jpg" id="2_3mgcj"]
+
+[resource]
+resource_name = "RayOVac_Flashlight_handle_Mat"
+cull_mode = 2
+albedo_color = Color(0.791787, 0.791787, 0.791787, 1)
+albedo_texture = ExtResource("1_oak85")
+roughness = 0.6
+normal_enabled = true
+normal_texture = ExtResource("2_3mgcj")

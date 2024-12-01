@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://do8xenafpyngu"]
 
 [ext_resource type="Script" path="res://scenes/FlashLight.gd" id="1_hfghb"]
-[ext_resource type="ArrayMesh" uid="uid://d3wkxdb35tni1" path="res://equipments/glass.res" id="1_ywjgu"]
-[ext_resource type="ArrayMesh" uid="uid://bolp002jhkxq" path="res://equipments/handle.res" id="2_g7p0d"]
+[ext_resource type="ArrayMesh" uid="uid://d3wkxdb35tni1" path="res://equipments/flashlight/glass.res" id="1_ywjgu"]
+[ext_resource type="ArrayMesh" uid="uid://bolp002jhkxq" path="res://equipments/flashlight/handle.res" id="2_g7p0d"]
 
 [node name="Weapon" type="Node3D"]
 script = ExtResource("1_hfghb")
