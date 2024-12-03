@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn5dntyxe3wib"
 path.s3tc="res://.godot/imported/flash_light_rayovac_style_1940s_0.jpg-e3adb7224dc9ff6e2178e7f96afedfd3.s3tc.ctex"
+path.etc2="res://.godot/imported/flash_light_rayovac_style_1940s_0.jpg-e3adb7224dc9ff6e2178e7f96afedfd3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://equipments/flashlight/flash_light_rayovac_style_1940s_0.jpg"
-dest_files=["res://.godot/imported/flash_light_rayovac_style_1940s_0.jpg-e3adb7224dc9ff6e2178e7f96afedfd3.s3tc.ctex"]
+dest_files=["res://.godot/imported/flash_light_rayovac_style_1940s_0.jpg-e3adb7224dc9ff6e2178e7f96afedfd3.s3tc.ctex", "res://.godot/imported/flash_light_rayovac_style_1940s_0.jpg-e3adb7224dc9ff6e2178e7f96afedfd3.etc2.ctex"]
 
 [params]
 

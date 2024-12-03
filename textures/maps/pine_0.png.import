@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ud0a3gu3p6on"
 path.s3tc="res://.godot/imported/pine_0.png-cc9b28474a24edfb4aabab0594d2f655.s3tc.ctex"
+path.etc2="res://.godot/imported/pine_0.png-cc9b28474a24edfb4aabab0594d2f655.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://textures/maps/pine_0.png"
-dest_files=["res://.godot/imported/pine_0.png-cc9b28474a24edfb4aabab0594d2f655.s3tc.ctex"]
+dest_files=["res://.godot/imported/pine_0.png-cc9b28474a24edfb4aabab0594d2f655.s3tc.ctex", "res://.godot/imported/pine_0.png-cc9b28474a24edfb4aabab0594d2f655.etc2.ctex"]
 
 [params]
 

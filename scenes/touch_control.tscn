@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://blto48gg00n03"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://scenes/virtual_joystick_scene.tscn" id="1_ph1bf"]
+[ext_resource type="Texture2D" uid="uid://ivoj52ncrdrl" path="res://controllers/jump_button.png" id="3_7xkxk"]
+[ext_resource type="Texture2D" uid="uid://b3yxfloe7tox3" path="res://controllers/switch-on-off-button.png" id="3_74one"]
+[ext_resource type="Texture2D" uid="uid://c6bs8nm32cujw" path="res://controllers/swap_button.png" id="4_veh86"]
+
+[node name="TouchControl" type="CanvasLayer"]
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("1_ph1bf")]
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_backward"
+
+[node name="ButtonGroup" type="Control" parent="."]
+clip_children = 1
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -26.0
+offset_right = -35.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="JumpBtn" type="TouchScreenButton" parent="ButtonGroup"]
+position = Vector2(-152, -307)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_7xkxk")
+action = "jump"
+
+[node name="SkillBtn" type="TouchScreenButton" parent="ButtonGroup"]
+position = Vector2(-151, -150)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_74one")
+action = "skill"
+
+[node name="SwapBtn" type="TouchScreenButton" parent="ButtonGroup"]
+position = Vector2(-314, -152)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_veh86")
+action = "change_weapon"

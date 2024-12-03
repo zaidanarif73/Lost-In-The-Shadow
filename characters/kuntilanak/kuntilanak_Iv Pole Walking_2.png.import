@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c06hnonglbjti"
 path.s3tc="res://.godot/imported/kuntilanak_Iv Pole Walking_2.png-8857426294d1221f2c73e6d6873c800a.s3tc.ctex"
+path.etc2="res://.godot/imported/kuntilanak_Iv Pole Walking_2.png-8857426294d1221f2c73e6d6873c800a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://characters/kuntilanak/kuntilanak_Iv Pole Walking_2.png"
-dest_files=["res://.godot/imported/kuntilanak_Iv Pole Walking_2.png-8857426294d1221f2c73e6d6873c800a.s3tc.ctex"]
+dest_files=["res://.godot/imported/kuntilanak_Iv Pole Walking_2.png-8857426294d1221f2c73e6d6873c800a.s3tc.ctex", "res://.godot/imported/kuntilanak_Iv Pole Walking_2.png-8857426294d1221f2c73e6d6873c800a.etc2.ctex"]
 
 [params]
 

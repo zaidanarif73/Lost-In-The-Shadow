@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://csvf15f1ukn4v"
 path.s3tc="res://.godot/imported/spooky.jpg-456f1a588629e24728f672151e87faef.s3tc.ctex"
+path.etc2="res://.godot/imported/spooky.jpg-456f1a588629e24728f672151e87faef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/maps/spooky.jpg"
-dest_files=["res://.godot/imported/spooky.jpg-456f1a588629e24728f672151e87faef.s3tc.ctex"]
+dest_files=["res://.godot/imported/spooky.jpg-456f1a588629e24728f672151e87faef.s3tc.ctex", "res://.godot/imported/spooky.jpg-456f1a588629e24728f672151e87faef.etc2.ctex"]
 
 [params]
 
