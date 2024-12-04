@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+class_name Player
+
 @export var SPEED : float = 5.0
 @export var JUMP_VELOCITY : float = 4.5
 @export var MOUSE_SENSITIVITY : float = 0.5
@@ -14,6 +16,10 @@ var _tilt_input : float
 var _mouse_rotation : Vector3
 var _player_rotation : Vector3
 var _camera_rotation : Vector3
+
+var health : float = 100.0 # Player's initial health
+var max_health : float = 100.0 # Max health
+@onready var health_bar : TextureProgressBar = $"../HealthBar/TextureProgressBar"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -52,6 +58,8 @@ func _ready():
 
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	health_bar.value = health  # Set the initial health on the health bar
 
 func _physics_process(delta):
 	# Update camera movement based on mouse movement
@@ -79,3 +87,16 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	# Update the health bar if the player gets hit
+	health_bar.value = health
+	
+	# Check if health reaches 0 and quit the game
+	if health == 0:
+		print("Player has died. Game over.")
+		get_tree().quit()  # This stops the gameese
+		
+func increase_health(amount: float) -> void:
+	# Increase health by a certain amount, ensuring it doesn't exceed max health
+	health = clamp(health + amount, 0.0, max_health)
+	print("Health increased. Current health: ", health)

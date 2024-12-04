@@ -1,8 +1,13 @@
 extends CharacterBody3D
 
+class_name Ghost
+
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var player = null
 var state_machine
+# Ghost attack detection
+var is_touching_player = false
+var damage_timer : float = 0.0  # Timer to track when to deal damage
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var nav_agent = $NavigationAgent3D
@@ -10,7 +15,9 @@ var state_machine
 
 @export var player_path : NodePath
 @export var SPEED : float = 3.0
-@export var ATTACK_RANGE : float = 0.8
+@export var ATTACK_RANGE : float = 1.0
+@export var DAMAGE_INTERVAL : float = 1.0
+
 
 func _ready():
 	player = get_node(player_path)
@@ -24,6 +31,20 @@ func _physics_process(delta):
 			look_at(Vector3(global_position.x + velocity.x, global_position.y, global_position.z + velocity.z), Vector3.UP)
 		"attack":
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
+			# Check for collision with player
+	if global_position.distance_to(player.global_position) < ATTACK_RANGE:
+		is_touching_player = true
+		
+		if is_touching_player:
+			damage_timer += delta  # Increase the timer by the elapsed time
+			if damage_timer >= DAMAGE_INTERVAL:
+				
+				if player and player.health > 0:
+					player.health -= 10  # Example: decrease health by 10
+					player.health = max(0, player.health)  # Prevent health from going below 0
+				damage_timer = 0.0  # Reset the timer after applying damage
+	
+	
 	
 	# Add the gravity.
 	if not is_on_floor():

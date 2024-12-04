@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c3ffql15mo0aj"]
+[gd_scene load_steps=19 format=3 uid="uid://c3ffql15mo0aj"]
 
 [ext_resource type="Script" path="res://controllers/scripts/fps_controller.gd" id="1_pgc1p"]
 [ext_resource type="Script" path="res://controllers/weapon_rig.gd" id="2_jqy4g"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bu6pe23ray0l3" path="res://scenes/medkit.tscn" id="3_kq2to"]
 [ext_resource type="PackedScene" uid="uid://cqtfc61ovy2v5" path="res://scenes/key.tscn" id="4_7n8t0"]
 [ext_resource type="Script" path="res://controllers/WeaponViewport.gd" id="4_t6vkx"]
+[ext_resource type="Script" path="res://scenes/medkit.gd" id="5_gpcj1"]
 [ext_resource type="Script" path="res://controllers/WeaponCamera.gd" id="6_lgbcu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vvpnu"]
@@ -144,6 +145,7 @@ speed_scale = 4.0
 [node name="Medkit" parent="CameraController/Camera3D/WeaponRig" instance=ExtResource("3_kq2to")]
 transform = Transform3D(0.01, 1.55431e-15, 1.77636e-15, -7.59392e-16, 0.008999, 0.00436095, -5.32907e-15, -0.00436095, 0.008999, 4.38611e-08, -0.11739, -0.188902)
 visible = false
+script = ExtResource("5_gpcj1")
 
 [node name="MedkitAnimation" type="AnimationPlayer" parent="CameraController/Camera3D/WeaponRig/Medkit"]
 libraries = {
