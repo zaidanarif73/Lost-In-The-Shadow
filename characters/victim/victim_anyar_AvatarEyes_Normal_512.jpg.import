@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cuslb33wlxr8o"
+path.s3tc="res://.godot/imported/victim_anyar_AvatarEyes_Normal_512.jpg-beb24bf2aee6add8e2ec659efe9dfd4c.s3tc.ctex"
+path.etc2="res://.godot/imported/victim_anyar_AvatarEyes_Normal_512.jpg-beb24bf2aee6add8e2ec659efe9dfd4c.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "48349016366fabe1060276d129fc5234"
+}
+
+[deps]
+
+source_file="res://characters/victim/victim_anyar_AvatarEyes_Normal_512.jpg"
+dest_files=["res://.godot/imported/victim_anyar_AvatarEyes_Normal_512.jpg-beb24bf2aee6add8e2ec659efe9dfd4c.s3tc.ctex", "res://.godot/imported/victim_anyar_AvatarEyes_Normal_512.jpg-beb24bf2aee6add8e2ec659efe9dfd4c.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://characters/victim2/victim_anyar_AvatarEyes_Normal_512.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

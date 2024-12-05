@@ -14,7 +14,7 @@ var damage_timer : float = 0.0  # Timer to track when to deal damage
 @onready var anim_tree = $AnimationTree
 
 @export var player_path : NodePath
-@export var SPEED : float = 3.0
+@export var SPEED : float = 2.5
 @export var ATTACK_RANGE : float = 1.0
 @export var DAMAGE_INTERVAL : float = 1.0
 

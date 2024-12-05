@@ -9,6 +9,7 @@ class_name Player
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 
+
 @onready var JUMP_BTN = $"../JumpBtn"
 var _mouse_input : bool = false
 var _rotation_input : float
@@ -20,6 +21,7 @@ var _camera_rotation : Vector3
 var health : float = 100.0 # Player's initial health
 var max_health : float = 100.0 # Max health
 @onready var health_bar : TextureProgressBar = $"../HealthBar/TextureProgressBar"
+@onready var victim = $"../maps/Victim"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")

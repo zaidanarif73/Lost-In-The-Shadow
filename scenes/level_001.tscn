@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b1yleqbb8tc7x"]
+[gd_scene load_steps=18 format=3 uid="uid://b1yleqbb8tc7x"]
 
 [ext_resource type="PackedScene" uid="uid://btv0a42cgxt8g" path="res://scenes/WE_test.tscn" id="1_db21n"]
 [ext_resource type="Texture2D" uid="uid://ivvpsi314b34" path="res://textures/grid.jpg" id="3_yfwkt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blto48gg00n03" path="res://scenes/touch_control.tscn" id="6_8dd8o"]
 [ext_resource type="PackedScene" uid="uid://ctjyv0knhvgvx" path="res://scenes/maps.tscn" id="6_ab2ph"]
 [ext_resource type="PackedScene" uid="uid://bp8j8l5mr71ik" path="res://scenes/ghost.tscn" id="6_bvqvx"]
+[ext_resource type="PackedScene" uid="uid://bhk5a2lft760" path="res://scenes/victim.tscn" id="6_ykkd3"]
 [ext_resource type="Script" path="res://scenes/health_bar.gd" id="7_p1b1p"]
 [ext_resource type="Texture2D" uid="uid://bdyror0lhvw3n" path="res://materials/ui/GUI-Kit-Pack-Free_35.png" id="8_fbn5l"]
 [ext_resource type="Texture2D" uid="uid://vdl78hwryoy6" path="res://materials/ui/GUI-Kit-Pack-Free_11.png" id="9_80rki"]
@@ -141,12 +142,17 @@ skeleton = NodePath("../Box")
 shape = SubResource("ConcavePolygonShape3D_j6kcl")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_liofc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87607, 0, 57.8839)
 
 [node name="maps" parent="." instance=ExtResource("6_ab2ph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.638, 0, 15.252)
 
 [node name="Ghost" parent="maps" instance=ExtResource("6_bvqvx")]
-transform = Transform3D(10.8967, 0, 0, 0, 10.8967, 0, 0, 0, 10.8967, 3.98424, -0.0500538, -19.1521)
+transform = Transform3D(10.8967, 0, 0, 0, 10.8967, 0, 0, 0, 10.8967, 3.98424, -0.0500538, 8.76948)
+player_path = NodePath("../../CharacterBody3D")
+
+[node name="Victim" parent="maps" instance=ExtResource("6_ykkd3")]
+transform = Transform3D(1.20101, 0, 0, 0, 1.20101, 0, 0, 0, 1.20101, 5.40513, 0.614458, -19.4513)
 player_path = NodePath("../../CharacterBody3D")
 
 [node name="TouchControl" parent="." instance=ExtResource("6_8dd8o")]
