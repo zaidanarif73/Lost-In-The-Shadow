@@ -20,10 +20,6 @@ config/icon="res://icon.svg"
 window/size/mode=3
 window/size/always_on_top=true
 
-[dotnet]
-
-project/assembly_name="lost in shadow"
-
 [input]
 
 move_forward={
