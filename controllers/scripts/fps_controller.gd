@@ -8,7 +8,8 @@ class_name Player
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
-
+@onready var JUMP_SFX = $JumpSfx
+@onready var WALK_SFX = $WalkSfx
 
 @onready var JUMP_BTN = $"../JumpBtn"
 var _mouse_input : bool = false
@@ -74,19 +75,27 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		JUMP_SFX.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+
+		# Memutar suara langkah jika belum dimainkan
+		if not WALK_SFX.playing:
+			WALK_SFX.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+		# Menghentikan suara langkah jika karakter berhenti
+		if WALK_SFX.playing:
+			WALK_SFX.stop()
 
 	move_and_slide()
 	
