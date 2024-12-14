@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://jsurbgmtydhn"]
+
+[ext_resource type="Script" path="res://scenes/finish_area.gd" id="1_cogmv"]
+[ext_resource type="Texture2D" uid="uid://cbfcs7al01qce" path="res://icons/racing-flag.png" id="2_7fa75"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gijcw"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 0, 0, 0.117647)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 5.0
+disable_receive_shadows = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_l04wc"]
+material = SubResource("StandardMaterial3D_gijcw")
+height = 5.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5exhr"]
+radius = 0.970851
+
+[node name="FinishArea" type="Area3D"]
+transform = Transform3D(0.683119, 0, 0, 0, 0.683119, 0, 0, 0, 0.683119, 0, 0.405282, 0)
+script = ExtResource("1_cogmv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.94311, 0, 0, 0, 1, 0, 0, 0, 1.96465, 0, 1.42175, 0)
+mesh = SubResource("CylinderMesh_l04wc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.512065, 0)
+shape = SubResource("CylinderShape3D_5exhr")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.169483, 0, 0, 0, 0.169483, 0, 0, 0, 0.169483, 0, 2.49804, 0)
+billboard = 1
+texture = ExtResource("2_7fa75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

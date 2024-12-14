@@ -5,7 +5,7 @@ class_name Victim
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var label = $Label3D
 @onready var loading = $ColorRect
-
+@onready var finish_area = $"../../FinishArea"
 
 @onready var nav_agent = $NavigationAgent3D
 
@@ -42,6 +42,7 @@ func _physics_process(delta):
 		
 	if victim_is_free == true:
 		label.visible = false
+		finish_area.visible = true
 		await get_tree().create_timer(2.0).timeout  # Delay of 2 second
 		path_finding()
 		look_at(Vector3(global_position.x + velocity.x, global_position.y, global_position.z + velocity.z), Vector3.UP)

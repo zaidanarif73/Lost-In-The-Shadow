@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c3ffql15mo0aj"]
+[gd_scene load_steps=22 format=3 uid="uid://c3ffql15mo0aj"]
 
 [ext_resource type="Script" path="res://controllers/scripts/fps_controller.gd" id="1_pgc1p"]
 [ext_resource type="Script" path="res://controllers/weapon_rig.gd" id="2_jqy4g"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://controllers/WeaponCamera.gd" id="6_lgbcu"]
 [ext_resource type="AudioStream" uid="uid://dyslbjf3rcfqo" path="res://sfx/Lompat.ogg" id="9_4b2t5"]
 [ext_resource type="AudioStream" uid="uid://dkc55v0pe3xwr" path="res://sfx/Jalan.ogg" id="10_jqak1"]
+[ext_resource type="Texture2D" uid="uid://daxauq3k14jot" path="res://icons/triangular-arrowhead-.png" id="11_ay4gs"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vvpnu"]
 
@@ -115,6 +116,7 @@ CAMERA_CONTROLLER = NodePath("CameraController/Camera3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.334377, 0, 0, 0, 0.73976, 0, 0, 0, 0.334377, -0.00506592, 0.77124, 0.26565)
+visible = false
 mesh = SubResource("CapsuleMesh_vvpnu")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -127,7 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0586925, 0.116966)
-cull_mask = 1048573
+cull_mask = 1048569
 current = true
 
 [node name="WeaponRig" type="Node3D" parent="CameraController/Camera3D"]
@@ -194,3 +196,8 @@ stream = ExtResource("9_4b2t5")
 
 [node name="WalkSfx" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("10_jqak1")
+
+[node name="Marker" type="Sprite3D" parent="."]
+transform = Transform3D(-0.205866, 1.79974e-08, 0, 7.8669e-16, 8.99869e-09, -0.205866, -1.79974e-08, -0.205866, -8.99869e-09, 0, 7, 0)
+layers = 4
+texture = ExtResource("11_ay4gs")

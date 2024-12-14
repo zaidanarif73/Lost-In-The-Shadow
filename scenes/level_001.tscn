@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b1yleqbb8tc7x"]
+[gd_scene load_steps=20 format=3 uid="uid://b1yleqbb8tc7x"]
 
 [ext_resource type="PackedScene" uid="uid://btv0a42cgxt8g" path="res://scenes/WE_test.tscn" id="1_db21n"]
 [ext_resource type="Texture2D" uid="uid://ivvpsi314b34" path="res://textures/grid.jpg" id="3_yfwkt"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://scenes/health_bar.gd" id="7_p1b1p"]
 [ext_resource type="Texture2D" uid="uid://bdyror0lhvw3n" path="res://materials/ui/GUI-Kit-Pack-Free_35.png" id="8_fbn5l"]
 [ext_resource type="Texture2D" uid="uid://vdl78hwryoy6" path="res://materials/ui/GUI-Kit-Pack-Free_11.png" id="9_80rki"]
+[ext_resource type="PackedScene" uid="uid://jsurbgmtydhn" path="res://scenes/finish_area.tscn" id="11_xacd0"]
+[ext_resource type="PackedScene" uid="uid://cs7i2jkv8d8u2" path="res://scenes/mini_map.tscn" id="12_6iifc"]
 
 [sub_resource type="Shader" id="Shader_orwg2"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.dev4's StandardMaterial3D.
@@ -174,5 +176,15 @@ texture_under = ExtResource("8_fbn5l")
 texture_progress = ExtResource("9_80rki")
 texture_progress_offset = Vector2(3.66, 4.375)
 script = ExtResource("7_p1b1p")
+
+[node name="FinishArea" parent="." instance=ExtResource("11_xacd0")]
+transform = Transform3D(2.59981, 0, 0, 0, 2.59981, 0, 0, 0, 2.59981, -53.7589, 1.83865, 4.12948)
+visible = false
+
+[node name="MiniMaps" type="CanvasLayer" parent="."]
+
+[node name="MiniMap" parent="MiniMaps" instance=ExtResource("12_6iifc")]
+target = NodePath("../../CharacterBody3D")
+camera_distance = 15.0
 
 [editable path="maps"]
