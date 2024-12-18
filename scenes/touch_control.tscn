@@ -33,15 +33,18 @@ position = Vector2(-152, -307)
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("3_7xkxk")
 action = "jump"
+visibility_mode = 1
 
 [node name="SkillBtn" type="TouchScreenButton" parent="ButtonGroup"]
 position = Vector2(-151, -150)
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("3_74one")
 action = "skill"
+visibility_mode = 1
 
 [node name="SwapBtn" type="TouchScreenButton" parent="ButtonGroup"]
 position = Vector2(-314, -152)
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("4_veh86")
 action = "change_weapon"
+visibility_mode = 1

@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://n6g1078xc46p"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_n4hdt"]
+[ext_resource type="Texture2D" uid="uid://chyih844vjbsj" path="res://assets/bg.png" id="1_spdqu"]
+[ext_resource type="Texture2D" uid="uid://bk6hmhop0nkub" path="res://assets/start-inactive.png" id="2_7aqgj"]
+[ext_resource type="Texture2D" uid="uid://cto2dpaf2f28e" path="res://assets/start-active.png" id="3_gvn0g"]
+[ext_resource type="Texture2D" uid="uid://dx7w3sga1sxmb" path="res://assets/about-inactive.png" id="4_eb1ug"]
+[ext_resource type="Texture2D" uid="uid://dcxcmknvyqpcf" path="res://assets/about-active.png" id="5_5navk"]
+[ext_resource type="Texture2D" uid="uid://y4uo1pqgywlw" path="res://assets/exit-inactive.png" id="6_p1txq"]
+[ext_resource type="Texture2D" uid="uid://divrs8i3d7qjy" path="res://assets/exit-active.png" id="7_sb5qw"]
+[ext_resource type="Texture2D" uid="uid://oghk0pkokjqu" path="res://assets/logo.png" id="9_xgw6h"]
+
+[node name="main-menu" type="Control"]
+clip_contents = true
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n4hdt")
+
+[node name="BG" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 43.0
+offset_bottom = 47.0
+scale = Vector2(28.68, 15.84)
+texture = ExtResource("1_spdqu")
+expand_mode = 1
+
+[node name="MobileButton" type="Control" parent="BG"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ExitTouchButton" type="TouchScreenButton" parent="BG/MobileButton"]
+position = Vector2(14.3305, 32.9545)
+scale = Vector2(0.0504978, 0.108025)
+texture_normal = ExtResource("6_p1txq")
+texture_pressed = ExtResource("7_sb5qw")
+visibility_mode = 1
+
+[node name="AboutTouchButton" type="TouchScreenButton" parent="BG/MobileButton"]
+position = Vector2(14.2957, 27.0202)
+scale = Vector2(0.0504978, 0.108025)
+texture_normal = ExtResource("4_eb1ug")
+texture_pressed = ExtResource("5_5navk")
+visibility_mode = 1
+
+[node name="StartTouchButton" type="TouchScreenButton" parent="BG/MobileButton"]
+position = Vector2(14.2957, 20.8333)
+scale = Vector2(0.0504978, 0.108025)
+texture_normal = ExtResource("2_7aqgj")
+texture_pressed = ExtResource("3_gvn0g")
+visibility_mode = 1
+
+[node name="PcButton" type="Control" parent="BG"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="startButton" type="TextureButton" parent="BG/PcButton"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 21.0
+offset_right = 27.0
+offset_bottom = 25.0
+texture_normal = ExtResource("2_7aqgj")
+texture_pressed = ExtResource("3_gvn0g")
+texture_hover = ExtResource("3_gvn0g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="aboutButton" type="TextureButton" parent="BG/PcButton"]
+layout_mode = 0
+offset_left = 13.0056
+offset_top = 25.8838
+offset_right = 27.0056
+offset_bottom = 29.8838
+texture_normal = ExtResource("4_eb1ug")
+texture_pressed = ExtResource("5_5navk")
+texture_hover = ExtResource("5_5navk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="exitButton" type="TextureButton" parent="BG/PcButton"]
+layout_mode = 0
+offset_left = 13.2148
+offset_top = 31.1869
+offset_right = 27.2148
+offset_bottom = 35.1869
+texture_normal = ExtResource("6_p1txq")
+texture_pressed = ExtResource("7_sb5qw")
+texture_hover = ExtResource("7_sb5qw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="logo" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 1.53417
+offset_top = 3.0303
+offset_right = 13.5342
+offset_bottom = 14.0303
+texture = ExtResource("9_xgw6h")
+expand_mode = 1
