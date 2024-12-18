@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://n6g1078xc46p"]
+[gd_scene load_steps=10 format=3 uid="uid://bc6mbsaqxsmig"]
 
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_n4hdt"]
 [ext_resource type="Texture2D" uid="uid://chyih844vjbsj" path="res://assets/bg.png" id="1_spdqu"]
@@ -22,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_n4hdt")
 
 [node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 6.0
 offset_right = 43.0
