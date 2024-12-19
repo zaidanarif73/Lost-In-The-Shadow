@@ -38,7 +38,8 @@ func _on_body_entered(body: Node3D) -> void:
 		victim_in_area = true
 	if player_in_area and victim_in_area:
 		print("Mission successfully completed!")
-		get_tree().quit()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		get_tree().change_scene_to_file("res://scenes/finish_menu.tscn")
 	
 func _on_body_exited(body: Node3D) -> void:
 	if body == player:

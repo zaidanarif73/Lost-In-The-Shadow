@@ -14,9 +14,9 @@ func _ready() -> void:
 		exit_button = $BG/MobileButton/ExitTouchButton
 	else:
 		# PC: Use TextureRect
-		start_button = $BG/PcButton/startButton
-		about_button = $BG/PcButton/aboutButton
-		exit_button = $BG/PcButton/exitButton
+		start_button = $BG/HSplitContainer/PcButton/startButton
+		about_button = $BG/HSplitContainer/PcButton/aboutButton
+		exit_button = $BG/HSplitContainer/PcButton/exitButton
 
 	# Log to confirm the nodes are found
 	print("Start button: ", start_button)
