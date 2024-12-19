@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cca87k0efp1hx"]
+
+[ext_resource type="Script" path="res://scenes/finish_menu.gd" id="1_u7686"]
+[ext_resource type="Texture2D" uid="uid://d2b7wauxde2ki" path="res://assets/finish.png" id="2_37aqs"]
+[ext_resource type="Texture2D" uid="uid://f378y7smq50e" path="res://assets/back-inactive.png" id="3_vhjvl"]
+[ext_resource type="Texture2D" uid="uid://bm3jh82xly52y" path="res://assets/back-active.png" id="4_xdgv6"]
+
+[node name="FinishMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7686")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 644.0
+texture = ExtResource("2_37aqs")
+
+[node name="backButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 528.0
+offset_right = 710.0
+offset_bottom = 582.0
+texture_normal = ExtResource("3_vhjvl")
+texture_pressed = ExtResource("4_xdgv6")
+texture_hover = ExtResource("4_xdgv6")
+ignore_texture_size = true
+stretch_mode = 0
