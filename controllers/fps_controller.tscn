@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scenes/medkit.gd" id="5_gpcj1"]
 [ext_resource type="Script" path="res://controllers/WeaponCamera.gd" id="6_lgbcu"]
 [ext_resource type="AudioStream" uid="uid://dyslbjf3rcfqo" path="res://sfx/Lompat.ogg" id="9_4b2t5"]
-[ext_resource type="AudioStream" uid="uid://dkc55v0pe3xwr" path="res://sfx/Jalan.ogg" id="10_jqak1"]
+[ext_resource type="AudioStream" uid="uid://cdxyqwpod3kjy" path="res://sfx/Jalan.ogg" id="10_jqak1"]
 [ext_resource type="Texture2D" uid="uid://daxauq3k14jot" path="res://icons/triangular-arrowhead-.png" id="11_ay4gs"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vvpnu"]
