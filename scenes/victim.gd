@@ -6,6 +6,7 @@ class_name Victim
 @onready var label = $Label3D
 @onready var loading = $ColorRect
 @onready var finish_area = $"../../FinishArea"
+@onready var message = $"../../Message/Label"
 
 @onready var nav_agent = $NavigationAgent3D
 
@@ -41,8 +42,11 @@ func _physics_process(delta):
 			loading.value = 0
 		
 	if victim_is_free == true:
+		
+		message_for_victim()
 		label.visible = false
 		finish_area.visible = true
+		
 		await get_tree().create_timer(2.0).timeout  # Delay of 2 second
 		path_finding()
 		look_at(Vector3(global_position.x + velocity.x, global_position.y, global_position.z + velocity.z), Vector3.UP)
@@ -58,6 +62,12 @@ func _physics_process(delta):
 		position.y -= gravity * delta
 
 	move_and_slide()
+	
+func message_for_victim():
+	message.text = "Bawa Ashley Ke Tempat Aman!"
+	message.visible = true  # Menampilkan node messagevar text_label = message.get_node("text")  # Mengakses child node bernama "text"
+	await get_tree().create_timer(5.0).timeout 
+	message.visible = false  # Menyembunyikan node message setelah 1 detik
 	
 func path_finding():
 	nav_agent.set_target_position(player.global_transform.origin)

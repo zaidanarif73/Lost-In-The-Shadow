@@ -14,14 +14,14 @@ config/name="lost in shadow"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/SplashScreen.png"
-config/icon="res://icon.svg"
+config/icon="res://WhatsApp Image 2024-12-08 at 12.57.26.jpeg"
 boot_splash/minimum_display_time=2000
 
 [display]
 
 window/size/mode=3
 window/size/always_on_top=true
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
 [dotnet]

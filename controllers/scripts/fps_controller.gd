@@ -23,6 +23,7 @@ var health : float = 100.0 # Player's initial health
 var max_health : float = 100.0 # Max health
 @onready var health_bar : TextureProgressBar = $"../HealthBar/TextureProgressBar"
 @onready var victim = $"../maps/Victim"
+@onready var message = $"../Message/Label"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -72,6 +73,11 @@ func _ready() -> void:
 
 	# Set the initial health on the health bar
 	health_bar.value = health
+	
+	message.text = "Temukan Ashley! Dan Hindari Hantu"
+	message.visible = true  # Menampilkan node messagevar text_label = message.get_node("text")  # Mengakses child node bernama "text"
+	await get_tree().create_timer(5.0).timeout 
+	message.visible = false  # Menyembunyikan node message setelah 1 detik
 
 func _physics_process(delta: float) -> void:
 	# Update camera movement based on input
