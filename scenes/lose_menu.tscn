@@ -9,8 +9,8 @@
 script = ExtResource("1_rreob")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1159.0
-offset_bottom = 642.0
+offset_right = 1148.0
+offset_bottom = 651.0
 texture = ExtResource("1_lpv3f")
 expand_mode = 1
 

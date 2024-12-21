@@ -11,8 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://oghk0pkokjqu" path="res://assets/logo.png" id="9_xgw6h"]
 
 [node name="main-menu" type="Control"]
-clip_contents = true
-layout_direction = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +22,7 @@ script = ExtResource("1_n4hdt")
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_right = 40.0
+offset_right = 41.0
 offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
