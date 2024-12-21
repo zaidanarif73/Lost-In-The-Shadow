@@ -33,7 +33,7 @@ func _ready() -> void:
 
 # Function to handle start button
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_001.tscn")
+	get_tree().change_scene_to_file("res://scenes/video_prolog.tscn")
 
 # Function to handle about button
 func _on_about_pressed() -> void:

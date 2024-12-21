@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://bu6pe23ray0l3"]
+[gd_scene load_steps=8 format=4 uid="uid://bu6pe23ray0l3"]
 
 [ext_resource type="Texture2D" uid="uid://buj6f3xygp4mv" path="res://equipments/medkit/medkit_0.png" id="1_j5j1f"]
 [ext_resource type="Texture2D" uid="uid://2sa6s4dgm22x" path="res://equipments/medkit/medkit_1.png" id="2_txljj"]
 [ext_resource type="Texture2D" uid="uid://cce47xsw16xfi" path="res://equipments/medkit/medkit_2.png" id="3_hqmox"]
+[ext_resource type="AudioStream" uid="uid://d4l23iwrdpcwm" path="res://sfx/medkit.ogg" id="4_8qws0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmdw8"]
 resource_name = "Medkit"
@@ -60,3 +61,6 @@ transform = Transform3D(29.2851, 0, 0, 0, -4.77114e-06, 29.2851, 0, -29.2851, -4
 layers = 2
 mesh = SubResource("ArrayMesh_j733c")
 skeleton = NodePath("")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_8qws0")
