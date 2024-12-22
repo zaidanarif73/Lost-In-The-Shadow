@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://chmjivfnyxxct"]
+
+[ext_resource type="Script" path="res://scenes/lose_video.gd" id="1_sfjms"]
+[ext_resource type="VideoStream" path="res://assets/lose-ending.ogv" id="2_eneb1"]
+
+[node name="Lose-video" type="Node2D"]
+script = ExtResource("1_sfjms")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -605.0
+offset_top = -343.0
+offset_right = 606.0
+offset_bottom = 348.0
+stream = ExtResource("2_eneb1")
+autoplay = true
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="."]

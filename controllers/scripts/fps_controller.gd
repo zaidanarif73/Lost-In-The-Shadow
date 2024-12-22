@@ -120,7 +120,7 @@ func _physics_process(delta: float) -> void:
 	if health == 0:
 		print("Bayangan gelap menyerang Anda. Game over.")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		get_tree().change_scene_to_file("res://scenes/lose_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/lose-video.tscn")
 
 func increase_health(amount: float) -> void:
 	# Increase health, ensuring it doesn't exceed max health
