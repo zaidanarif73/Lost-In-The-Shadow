@@ -188,6 +188,8 @@ script = ExtResource("4_t6vkx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0268364, 0)
 cull_mask = 1048574
 current = true
+fov = 105.5
+near = 0.006
 script = ExtResource("6_lgbcu")
 MAIN_CAMERA = NodePath("../../../CameraController/Camera3D/WeaponRig")
 
