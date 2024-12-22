@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5bswc4fu1c05"]
+
+[ext_resource type="Texture2D" uid="uid://cquwpwms7d1s8" path="res://Maps_View.png" id="1_4u5xj"]
+
+[node name="Maps_Viewer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapsView" type="Sprite2D" parent="."]
+position = Vector2(243, 239)
+texture = ExtResource("1_4u5xj")

@@ -13,6 +13,7 @@ config_version=5
 config/name="lost in shadow"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/max_fps=60
 boot_splash/image="res://assets/SplashScreen.png"
 config/icon="res://WhatsApp Image 2024-12-08 at 12.57.26.jpeg"
 boot_splash/minimum_display_time=2000
@@ -79,6 +80,8 @@ change_weapon={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
 textures/default_filters/anisotropic_filtering_level=4
 textures/default_filters/texture_mipmap_bias=-1.0
