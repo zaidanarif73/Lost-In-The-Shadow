@@ -5,7 +5,7 @@ extends ColorRect
 @export var min_value := 0.0
 
 var success : bool = false
-var SPEED = 1.0
+var SPEED = 2.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

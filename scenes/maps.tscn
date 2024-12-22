@@ -1966,7 +1966,6 @@ mesh = SubResource("BoxMesh_fd3gp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Tembok"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tembok/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_16gv0")
 
 [node name="Tembok2" type="MeshInstance3D" parent="."]
@@ -1976,7 +1975,6 @@ mesh = SubResource("BoxMesh_fd3gp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Tembok2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tembok2/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_16gv0")
 
 [node name="Tembok3" type="MeshInstance3D" parent="."]
@@ -1986,7 +1984,6 @@ mesh = SubResource("BoxMesh_fd3gp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Tembok3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tembok3/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_16gv0")
 
 [node name="Tembok4" type="MeshInstance3D" parent="."]
@@ -1996,5 +1993,4 @@ mesh = SubResource("BoxMesh_fd3gp")
 [node name="StaticBody3D" type="StaticBody3D" parent="Tembok4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tembok4/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_16gv0")
